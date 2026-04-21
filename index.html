@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ajo — Group Contribution</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1 id="groupName">Lagos Traders Ajo</h1>
+        <p>Monthly contribution: <strong id="groupAmount">₦10,000</strong></p>
+      </div>
+      <div class="cycle-badge">Cycle <span id="cycleNum">1</span></div>
+    </header>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="label">Pool this cycle</div>
+        <div class="value" id="statPool">₦0</div>
+      </div>
+      <div class="stat">
+        <div class="label">Members</div>
+        <div class="value" id="statMembers">0</div>
+      </div>
+      <div class="stat">
+        <div class="label">Next recipient</div>
+        <div class="value" id="statRecipient">—</div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div>
+        <div class="card">
+          <h2>Add member</h2>
+          <form id="memberForm">
+            <input type="text" id="memberName" placeholder="Member name" required />
+            <button type="submit">Add member</button>
+          </form>
+        </div>
+
+        <div style="height: 16px;"></div>
+
+        <div class="card">
+          <h2>Record contribution</h2>
+          <form id="contribForm">
+            <input type="text" id="contribName" placeholder="Member name" required />
+            <input type="number" id="contribAmount" placeholder="Amount (₦)" value="10000" required />
+            <button type="submit">Record</button>
+          </form>
+          <button class="payout" id="payoutBtn">Release payout →</button>
+        </div>
+      </div>
+
+      <div>
+        <div class="card">
+          <h2>Members (cycle <span class="cycleInline">1</span>)</h2>
+          <div id="memberList">
+            <div class="empty">No members yet — add one to begin.</div>
+          </div>
+
+          <div class="divider"></div>
+
+          <h2>Activity log</h2>
+          <div class="log" id="log">
+            <div class="empty">Actions will appear here.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
